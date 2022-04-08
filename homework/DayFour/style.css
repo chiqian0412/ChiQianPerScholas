@@ -1,0 +1,29 @@
+*{
+    margin:10px;
+    padding:10px;
+}
+.head{
+    background: pink;
+    
+}
+body
+{
+    background-color: #e9edc9;
+}
+h1{
+    font-size:100px;
+    text-align:center;
+}
+p{
+    color:blue;
+    text-align:center;
+}
+.productLine{
+    display:flex;
+    border:solid yellow;
+    box-align:center;
+}
+.product{
+    background-color: thistle;
+    width: 100px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="head">
+    <h1>Chi's Beauty Store</h1>
+    <hr>
+    <nav>
+        <div class="nav-links">
+            <ul>
+                <li id="Home">Home</li>
+                <li id="ConnectUs">Connect Us</li>
+                <li id="cart">Cart:0</li>
+            </ul>
+        </div>
+    </nav>
+
+</div>
+<h3 class="Category">Makeup</h3>  
+<hr> 
+<div class="productLine">
+    <div class="product">
+        <img src="image/eyeline.png"
+        width = 95%
+        height = 50%/>
+        <p>Eyeliner</p>
+        <p>$29.99</p>
+        <button onclick="addToBag('makeup',0)">Add To Bag</button>
+    </div>
+    <div class="product">
+        <img src="image/powder.png"
+        width = 95%
+        height = 50%/>
+        <p>Powder</p>
+        <p>$39.99</p>
+        <button onclick="addToBag('makeup',1)">Add To Bag</button>
+    </div>
+    <div class="product">
+        <img src="image/lipstick.png"
+        width = 95%
+        height = 50%/>
+        <p>Lipstick</p>
+        <p>$29.99</p>
+        <button onclick="addToBag('makeup',2)">Add To Bag</button>
+    </div>
+    <div class="product">
+        <img src="image/eyeshadow.png"
+        width = 95%
+        height = 50%/>
+        <p>Eyeshadow</p>
+        <p>$35</p>
+        <button onclick="addToBag('makeup',3)">Add To Bag</button>
+    </div>
+    <div class="product">
+        <img src="image/blush.png"
+        width = 95%
+        height = 50%/>
+        <p>Blush</p>
+        <p>$25</p>
+        <button onclick="addToBag('makeup',4)">Add To Bag</button>
+    </div>
+    
+
+</div> 
+<div class="checkout" id="checkout-id">
+    <div class="checkout-item">
+        <h3>Total</h3>
+        <h4>$0.00</h4>
+    </div>
+</div>
+<br>
+
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/dab60938212491.5968c68fa9113.gif" alt="" class="endBox">
+
+
+    
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+.navContainer{
+    border: solid blue;
+    background-color: lemonchiffon;
+    height:200px;
+}
+.covidBlkContainer{
+    border:solid green;
+    height:200px;
+}
+.navButtonContainer{
+    border:solid purple;
+    padding:15px;
+    display:flex;
+    justify-content:space-around;
+}
+.topNav{
+    border:solid green;
+    height:100px;
+    display:flex;
+    justify-content: space-between;
+}
+.iconContainer{
+    width:40%;
+    display:flex;
+    justify-content: space-around;
+    padding-top:35px;
+}
+.colorLinkContainer{
+    display:flex;
+    width:40%;
+    justify-content: space-around;
+    padding-top:25px;
+    margin-left:65px;
+}
+.colorLink{
+    border:solid peru;
+    padding:4px;
+    border-width:2px;
+    height:20px;
+}
+.colorLink:hover{
+    border:solid peru;
+    background-color: black;
+    color:white;
+    padding:2px;
+    border-width:2px;
+    height:20px;
+}
+.mag-glass{
+    width:20px;
+    height:20px;
+}
+.iconSm{
+    border:solid black;
+    height:9px;
+    padding:6px;
+    width:65px;
+    border-radius: 22px;
+    border-width: .2px;
+}
+.iconSm:hover{
+    background-color: white;
+    padding:10px;
+    border:solid black;
+    
+}
+@keyframes moveLeft{
+0% { transform: translateX(0vw) }
+50% { transform: translateX(65vw) }
+100% { transform: translateX(0vw) }
+    
+}
+.flyImg{
+    animation: moveLeft ease-in-out
+    8s infinite;
+    height:90px;
+}

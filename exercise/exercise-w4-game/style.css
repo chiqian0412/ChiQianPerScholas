@@ -1,0 +1,35 @@
+.movebox{
+    height: 400px;
+    width: 800px;
+    border:solid black 1px;
+    background-color: pink;
+    margin:center;
+   
+}
+.contorls{
+   display: flex;
+   justify-content: center;
+}
+button{
+    border: solid green 1px;
+    width: 100px;
+}
+.player{
+    /* position:absolute; */
+    width:50px;
+    padding-top: 0px;
+    padding-left: 0px;
+    /* transform:translateY(50px); */
+}
+.faceUp{
+    transform: rotateZ(-0.25turn);
+}
+.faceDown{
+    transform: rotateZ(0.25turn);
+}
+.faceLeft{
+    transform: rotateX(180deg);
+}
+.faceRight{
+    transform: rotateX(0deg);
+}

@@ -1,0 +1,48 @@
+*{
+    background-color:indigo;
+}
+h1{
+    color:chocolate;
+    text-align: center;
+    font-size: 50px;
+}
+.output{
+    height: 3rem;
+    width: 80%;
+    color:white;
+    font-size: 50px;
+    border:solid gray 5px;
+    border-radius: 20px;
+    padding:9%
+}
+.scoreContainer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    color:chocolate;
+}
+.scoreContainer .magic{
+    width:100px;
+    border-radius: 50%;
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.card1, .card2, .card3{
+    background-image: url('https://c8.alamy.com/comp/2DADW92/tarot-card-with-hand-and-planet-magic-card-boho-design-tattoo-engraving-cover-for-the-witch-golden-mystical-hand-drawing-on-a-black-background-with-stars-2DADW92.jpg');
+    background-size: cover;
+    width:250px;
+    height:400px;
+}
+.card1:hover, .card2:hover, .card3:hover{
+    border:solid gold 5px;
+    border-radius: 20px;
+}
+.insideImg{
+    background-image: url('https://thumbs.dreamstime.com/b/magic-tree-home-enchanted-forest-218929012.jpg');
+    background-size: cover;
+    width:250px;
+    height:400px;
+}

@@ -1,0 +1,227 @@
+
+
+
+
+/* Keyframes */
+@keyframes moveLeft {
+    from {
+      transform: translateX(0vw);
+      border:solid blue;
+    }
+  
+    to {
+        border:solid yellow;
+        border-width:12px;
+
+      transform: translateX(100vw);
+    }
+  }
+
+
+  @keyframes imRolling{
+    10%{
+      transform: rotate(360deg);
+      border:solid blue;
+    }
+  
+   100% {
+        border:solid yellow;
+        border-width:12px;
+    }
+  }
+
+/* ---------------------- */
+
+
+/* Desktop */
+
+@media (max-width: 2150px){
+    body{
+        background-color: grey;
+        color:black;
+        font-size:26px;
+    }
+    .photoTop{
+        height:62vh;
+        width:100%;
+        margin-top:1em;
+        border-width:.2px;
+    }
+    
+}
+/* --------------------- */
+
+
+
+/* Mid */
+@media (max-width: 900px){
+    body{
+        background-color: blue;
+        font-size:22px;
+    }
+    .photoTop{
+        height:42vh;
+        width:100%;
+        margin-top:1em;
+        border-width:.2px;
+    }
+    
+
+}
+
+/* --------------------- */
+
+
+/* Mobile */
+@media (max-width: 650px){
+    body{
+        background-color: black;
+        color:white;
+        font-size:18px;
+    }
+    .photoTop{
+        height:42vh;
+        width:100%;
+        margin-top:1em;
+        border-width:.2px;
+    }
+    
+
+}
+
+/* --------------------- */
+
+
+
+/* --------_General ---- */
+/* elements that stay same no matter view */
+
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navButton{
+    border-width:.2px;
+    border-radius:25px;
+    
+    text-align:center;
+    /* font-size:8px; */
+}
+.navButton:hover{
+    border:solid grey;
+    /* font-size:8px; */
+    border-radius:25px;
+    width:22%;
+    text-align:center;
+    transition:1s;
+}
+
+
+.header{
+display:flex;
+padding:15%;
+border-width:.2px;
+border:solid peru;
+}
+.logo{
+    height:12vh;
+   border:solid peru;
+    border-radius:50%;
+}
+.logo:hover{
+    height:12vh;
+   border:solid peru;
+    border-radius:50%;
+
+
+}
+
+.mainTitle{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width:60%;
+    text-align: center;
+    color:lemonchiffon;
+}
+.hiddenDiv{
+    color:darkgoldenrod;
+}
+.cspecial{
+    width:100%;
+    
+    
+}
+
+.wexler2{
+    height:90px;
+    border-radius:32px;
+    background-image:url();
+    animation:moveLeft 5s ease-in-out infinite;
+}
+.textImportant{
+    text-align: center;
+    font-size:22px;
+    font-family:cursive;
+    color:peachpuff;
+}
+/* -------------medQueryThis */
+.superContainer{
+    border:solid lemonchiffon;
+    border-radius:32px;
+    border-width:.3px;
+    margin:1em;
+    height:42vh;
+    background-image:url('https://i.pinimg.com/originals/8b/b3/87/8bb387ee878eddeb23baea344d4e13af.gif');
+    background-size:cover;
+
+}
+.superContainer:hover{
+    border:solid lemonchiffon;
+    border-radius:32px;
+    border-width:.3px;
+    transition:1s;
+    height:42vh;
+    background-image:url('https://i.pinimg.com/originals/8b/b3/87/8bb387ee878eddeb23baea344d4e13af.gif');
+    background-size:cover;
+    -webkit-box-shadow: 5px 5px 15px 5px #78B9FF; 
+box-shadow: 5px 5px 15px 5px #78B9FF;
+
+}
+/* -------------medQueryThis */
+.btnContainer{
+    justify-content: space-around;
+    /* border:solid peru; */
+    display:flex;
+}
+.btnSm{
+    /* border:solid peru; */
+    padding:6px;
+    border-width:.2px;
+    margin:1em;
+    font-size: 14px;
+}
+.btnSm:hover{
+    /* border:solid peru; */
+    padding:6px;
+    border-width:.2px;
+    margin:1em;
+    font-size: 14px;
+    color:peru;
+}
+#topSpace{
+    margin-top:3em;
+}
+
+.viewer{
+    border:solid white;
+    border-width:.2px;
+    height:34vh;
+}
+.curtainHolder{
+    border:solid white;
+    border-width:.2px;
+    height:34vh;
+    background-image:url('https://thumbs.gfycat.com/AjarGentleCricket-max-1mb.gif');
+    background-size:cover;
+}

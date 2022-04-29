@@ -1,0 +1,88 @@
+/* Keyframes */
+@keyframes thisIsAKeyFrame {
+    from {
+      transform: translateX(0vw);
+    }
+  
+    to {
+      transform: translateX(100vw);
+    }
+  }
+
+
+/* ---------------------- */
+
+
+/* Desktop */
+
+@media (max-width: 2150px){
+    body{
+        background-color: grey;
+        color:black;
+    }
+    .walter{
+        background-size:cover;
+        border:solid lime;
+    height:62vh;
+        background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/22/Animated_fire_by_nevit.gif');
+    }
+    
+}
+/* --------------------- */
+
+
+
+/* Mid */
+@media (max-width: 900px){
+    body{
+        background-color: blue;
+    }
+    .title{
+        color:yellow;
+        animation: thisIsAKeyFrame 10s ease-in infinite;
+    }
+    .walter{
+        background-size:cover;
+        border:solid lime;
+    height:62vh;
+        background-image:url('https://media3.giphy.com/media/HmTLatwLWpTQk/200.gif');
+    }
+
+}
+
+/* --------------------- */
+
+
+/* Mobile */
+@media (max-width: 650px){
+    body{
+        background-color: black;
+        color:white;
+    }
+    .title{
+        color:lime;
+        animation: thisIsAKeyFrame 10s ease-in infinite;
+    }
+    .walter{
+        background-size:cover;
+        border:solid lime;
+    height:62vh;
+        background-image:url('https://media2.giphy.com/media/4NPT1ipEUoiMo/giphy.gif');
+    }
+
+}
+
+/* --------------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* --------_General ---- */
+/* elements that stay same no matter view */

@@ -1,0 +1,70 @@
+*{
+    /* border: dashed pink 1px; */
+    margin:0;
+    padding:0;
+}
+:root{
+    --button-color:purple;
+    --hover-color: #d89d1e;
+}
+body{
+    text-align: center;
+}
+.serch-box{
+    display: flex;
+    justify-content: center;
+}
+.serch-box *{
+    padding:0.5rem;
+    margin: 0 0.125rem;
+}
+.serch-box input{
+    border-radius: 5px;
+    padding:0.2rem;
+}
+.serch-box button{
+    cursor:pointer;
+    background-color: var(--button-color);
+    color:white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+.serch-box button:hover{
+    background-color: var(--hover-color);
+}
+.complaints-output{
+    display: flex;
+    flex-direction: column;
+}
+.complaint{
+    display: flex;
+    flex-direction: column;
+}
+.complaint-title{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 6rem;
+    margin-right: 3rem;
+    padding:0.5rem;
+}
+.complaint-title button{
+    cursor:pointer;
+    background-color: seagreen;
+    color:white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding:0.2rem;
+}
+.complaint-title button:hover{
+    background-color: var(--hover-color);
+}
+.complaint-response{
+    display: none;
+    text-align: center;
+    padding:1rem;
+}
+.active{
+    display: block;
+}

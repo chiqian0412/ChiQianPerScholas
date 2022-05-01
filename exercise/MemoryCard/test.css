@@ -1,6 +1,7 @@
 
 body{
     display:flex;
+    flex-flow: column;
     align-items:center;
     justify-content: center;
     min-height: 100vh;
@@ -39,18 +40,14 @@ body{
     border: purple;
     box-shadow: thistle;
 }
-.card .front-view span{
-    color:black;
-    font-size:40px;
-}
-.card .back-view{
-    /* display:none; */
-    transform:rotateY(-180deg);
-}
 .card .back-view img{
     max-width:100px;
     border:solid purple;
     border-radius: 10px;
+}
+.hidden{
+    display: none;
+    
 }
 
 

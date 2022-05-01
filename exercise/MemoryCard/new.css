@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.gameBoard{
+    background-color: palevioletred;
+    border-radius: 10px;
+    height: 500px;
+    width:500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding-top: 15px;
+}
+/* .cardItem{ */
+    /* display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between; */
+    /* padding:1px; */
+    /* height:calc(100%/4-10px);
+    width:calc(100%/4-10px); */
+/* } */
+.front, .back{
+    cursor:pointer;
+    height:100px;
+    width:100px;
+    border:solid purple 1px;
+    border-radius: 10px;
+}
+.back{
+    /* display: none; */
+}
+.front{
+    /* display: none; */
+}

@@ -1,6 +1,19 @@
 const gameBoard = document.querySelector('.gameBoard');
 const score = document.querySelector('.score span');
 
+var timer= document.querySelector('.timer');       
+var maxtime = 20;  
+function CountDown() {
+    if (maxtime >= 0) {
+        msg = "Countdown:" + maxtime + "s";
+        timer.innerHTML = msg;
+        if(maxtime === 0 ){
+            alert("Time Over!");
+        } 
+    }
+}    
+var timers = setInterval("CountDown()", 1000); 
+
 // Classes the cards and back card.
 class card{
     constructor(name,src){
@@ -37,7 +50,7 @@ const shuffle = () =>{
 
 
 // create a generate function.
-const generateCards = () => {
+const generateCards = (a) => {
     // gameBoard.innerHTML = '';
     shuffle()
 
@@ -46,16 +59,16 @@ const generateCards = () => {
         cardItem.classList = 'cardItem';
         const frontView = document.createElement('img');
         frontView.classList = 'front';
-        const backView = document.createElement('img');
-        backView.classList = 'back';
+        // const backView = document.createElement('img');
+        // backView.classList = 'back';
         gameBoard.appendChild(cardItem);
         cardItem.appendChild(frontView);
-        cardItem.appendChild(backView);
+        // cardItem.appendChild(backView);
         frontView.src = a.src;
-        backView.src = backCard.src;
+        // backView.src = backCard.src;
     })
 
+timers;
 }
-generateCards()
-console.log(gameBoard.innerHTML)
-// 
+// generateCards();
+// console.log(gameBoard.innerHTML);

@@ -10,11 +10,24 @@
     </head>
     <body>
         <h1 class="header">Memory Game</h1>
-        <p class="score">score:<span>0</span></p>
-        <div class="gameBoard">
-            <!-- Add cards here -->
+        <div class="timer"></div>
+        <div class="game">
+            <div class="player1">
+                <div class="scores">Player1 Scores:0</div>
+                <img src="./Image/player1.png" alt="" class="player" id="player1">
+            </div>
+            <div class="gameBoard">
+                <!-- Add cards here -->
+            </div>
+            <div class="player2">
+                <div class="scores">Player2 Scores:0</div>
+                <img src="./Image/player2.png" alt="" class="player" id="player2">
+            </div>
         </div>
-
+        <div class="control">
+            <button onclick="generateCards()" class="start">Start</button>
+            <button class="exit">Exit</button>
+        </div>
         
         <script src="new.js"></script>
     </body>

@@ -10,7 +10,7 @@
     </head>
     <body>
         <h1 class="header">Memory Game</h1>
-        <div class="timer"></div>
+        <div class="timer">Limite time: 30s</div>
         <div class="game">
             <div class="player1">
                 <div class="scores">Player1 Scores:0</div>
@@ -25,8 +25,8 @@
             </div>
         </div>
         <div class="control">
-            <button onclick="generateCards()" class="start">Start</button>
-            <button class="exit">Exit</button>
+            <button onclick="playerOneStart()" class="start">Player One</button>
+            <button onclick="playerTwoStart()" class="exit">Player Two</button>
         </div>
         
         <script src="new.js"></script>

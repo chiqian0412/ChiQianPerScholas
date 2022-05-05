@@ -1,0 +1,86 @@
+
+body{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: grey
+}
+.rules{
+    width: 300px;
+    height: 300px;
+    text-align: left;
+    padding:100px;
+}
+.timer{
+    height: 20px;
+    width: 500px;
+    background-color:green;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding:5px;
+}
+.game{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* padding:10px; */
+}
+.player1, .player2{
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.scores{
+    height: 100px;
+    width: 200px;
+    border:solid black;
+    border-radius: 15px;
+}
+#player1, #player2{
+    width:200px;
+    height: 200px;
+    border:solid gray;
+}
+.gameBoard{
+    background-color: palevioletred;
+    border-radius: 10px;
+    height: 500px;
+    width:500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding:10px;
+    padding-top: 20px;
+}
+.front{
+    cursor:pointer;
+    height:100px;
+    width:100px;
+    border:solid purple 1px;
+    border-radius: 10px;
+}
+
+.hidden{
+    display: none;
+}
+.control{
+    /* border: solid yellow ; */
+    width: 450px;
+    display:flex;
+    justify-content: space-between;
+}
+button{
+    border:solid black 1px;
+    border-radius: 20px;
+    background-color: purple;
+    color:white;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+}
+button:hover{
+    box-shadow: 10px 5px 5px yellow;
+}

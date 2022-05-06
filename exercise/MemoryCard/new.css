@@ -55,17 +55,6 @@ body{
     padding:10px;
     padding-top: 20px;
 }
-<<<<<<< HEAD
-.front{
-=======
-/* .cardItem{ */
-    /* display:flex;
-    flex-wrap:wrap;
-    justify-content: space-between; */
-    /* padding:1px; */
-    /* height:calc(100%/4-10px);
-    width:calc(100%/4-10px); */
-/* } */
 .front{
     cursor:pointer;
     height:100px;
@@ -73,24 +62,9 @@ body{
     border:solid purple 1px;
     border-radius: 10px;
 }
-.back{
->>>>>>> refs/remotes/origin/main
-    cursor:pointer;
-    background-image: url('./Image/questionMark.jpeg');
-    height:100px;
-    width:100px;
-    border:solid purple 1px;
-    border-radius: 10px;
-    animation: flip 1s ease-in-out;
-}
-<<<<<<< HEAD
 
 .hidden{
     display: none;
-=======
-.front{
-    /* display: none; */
->>>>>>> refs/remotes/origin/main
 }
 .control{
     /* border: solid yellow ; */
@@ -110,3 +84,5 @@ button{
 button:hover{
     box-shadow: 10px 5px 5px yellow;
 }
+
+  

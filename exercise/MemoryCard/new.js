@@ -1,18 +1,11 @@
 const gameBoard = document.querySelector('.gameBoard');
 const score = document.querySelectorAll('.scores');//array
-<<<<<<< HEAD
 // var playerOneScore = 0;
 // var playerTwoScore = 0;
 var totle = 0;
 var playerScores = [];
 var curCards = [];
 // the start website.
-=======
-console.log(score[0].innerHTML)
-var playerOneScore = 0;
-var playerTwoScore = 0;
-var totle = 0;
->>>>>>> refs/remotes/origin/main
 gameBoard.innerHTML = 
 `<div class="rules">
 <h3> Memory Game Rules:</h3>
@@ -26,7 +19,6 @@ class Card{
     constructor(name,src){
         this.name = name
         this.src = src
-        this.wasMatch = false
     }
 }
 const card1 = new Card('card1', './Image/1.jpeg')
@@ -55,44 +47,20 @@ const shuffle = () =>{
     console.log(cards)
     return cards;
 }
-// create the timing function.
-var timer= document.querySelector('.timer');    
-timer.innerHTML = "Limite time:20s"
-var maxtime = 1000;  
-function timing(){
-    countDown = setInterval(() =>{
-        maxtime -= 1;
-        if (maxtime >= 0) {
-            msg = "Limite time:" + maxtime + "s";
-            timer.innerHTML = msg;
-            if(totle===80){
-                clearInterval(countDown);
-                totle = totle+ maxtime;
-                // score[player-1].innerHTML= `Player${player} Scores:+ ${totle}`
-            } else if(maxtime === 0 ) {
-                alert("Time Over!");
-            } 
-        }
-    }, 1000); 
-} 
-
-//create the flip card function.
-
-
 
 var timer= document.querySelector('.time');   
 var scoresall = document.querySelector('.scoresall') ;
-var maxtime = 60; 
+var maxtime = 20; 
 var timestart;
 const startGame = () =>{
     gameBoard.innerHTML = "";
-    timer.innerHTML = "Limite time:60s";
+    timer.innerHTML = "Limit time:60s";
     scoresall.innerHTML = 'Scores:0';
 }
 const countDown = () =>{
     maxtime -= 1;
     if (maxtime >= 0) {
-        msg = "Limite time:" + maxtime + "s";
+        msg = "Limit time:" + maxtime + "s";
         timer.innerHTML = msg;
     }
     else{
@@ -101,7 +69,7 @@ const countDown = () =>{
         playerScores.push(totle);
         scoresall.innerHTML = 'Scores:'+ totle;
         totle = 0;
-        maxtime = 30;
+        maxtime = 20;
         comparePlayers();
         
     }
@@ -117,19 +85,13 @@ const notMatch = () =>{
 // create a generate function.
 const generateCards = () => {
     shuffle()
-<<<<<<< HEAD
     startGame()
     timestart = setInterval(countDown,1000);
-=======
-    gameBoard.innerHTML = "";
-
->>>>>>> refs/remotes/origin/main
     cards.forEach((card,index) => {
         const cardItem = document.createElement('div');
         cardItem.classList = 'cardItem';
         const frontView = document.createElement('img');
         frontView.classList = 'front';
-<<<<<<< HEAD
         // add the click event to every cards.
         frontView.addEventListener("click",(e) => {
             curCards.push(e.target);
@@ -160,12 +122,12 @@ const generateCards = () => {
                         playerScores.push(totle);
                         scoresall.innerHTML = 'Scores:'+ totle;
                         totle = 0;
-                        maxtime = 60;
+                        maxtime = 20;
                         
                         // compare two players scores.
                         comparePlayers();
                     }
-                   
+                //    playerScores.splice(0,2);
                 }else {
                     setTimeout(notMatch,600);
                 }
@@ -176,6 +138,9 @@ const generateCards = () => {
 const comparePlayers = () =>{
     if(playerScores.length===1){
         score[0].innerHTML = 'Player One:'+playerScores[0];
+        gameBoard.innerHTML = 
+            `<div class="rules">
+            <h1>Click Start Again to Switch Player</h1>`
     }else if(playerScores.length === 2){
         score[1].innerHTML =  'Player two:'+playerScores[1];
         if(playerScores[0]>playerScores[1]){
@@ -200,84 +165,6 @@ const comparePlayers = () =>{
             <h3>No one wins!</h3>
             `
         }
+        playerScores.splice(0,2);
     }
 }
-=======
-        frontView.addEventListener("click",() => {flipCard(card,index)});
-        // const backView = document.createElement('img');
-        // backView.classList = 'back';
-        gameBoard.appendChild(cardItem);
-        cardItem.appendChild(frontView);
-        // cardItem.appendChild(backView);
-        // frontView.src = index.src;
-        frontView.src = backCard.src;
-        // backView.src = backCard.src;
-    })
-
-    var frontViews = document.querySelectorAll(".front");
-    var curCards = []; // two flip cards' index array.
-    function flipCard(card,index){
-        console.log(index);
-        frontViews[index].src = cards[index].src; // click the card to show the animals.
-        curCards.push(index);
-        if(curCards.length === 2){
-            console.log('bbb',curCards[0])
-            console.log('aaa',frontViews[0])
-            if(cards[curCards[0]].wasMatch ===false &&cards[curCards[1]].wasMatch ===false && (frontViews[curCards[0]] !== frontViews[curCards[1]])){
-
-                // two cards not match then cover again.
-                if(frontViews[curCards[0]].src !== frontViews[curCards[1]].src ){
-                   
-                        console.log(frontViews[0], backCard.src,curCards[1])
-                        frontViews[curCards[0]].src = backCard.src;
-                        setTimeout(()=>{
-                            this.frontViews[curCards[1]].src = backCard.src;
-                        },1000);
-                   
-                }else {
-                    // match than add scores.
-                    totle += 10;
-                    console.log('score',totle)
-                    cards[curCards[0]].wasMatch = true;
-                    cards[curCards[1]].wasMatch = true;
-                // score[0].innerHTML = 'Player1 Scores:'+ playerOneScore;
-                } 
-            }
-            else{
-                flipCard(card,index);
-            }
-            
-            curCards.splice(0,2);
-        }
-    }
-    //  when player click the start, the timer will count down.
-    countDown = setInterval(() =>{
-        maxtime -= 1;
-        if (maxtime >= 0) {
-            msg = "Limite time:" + maxtime + "s";
-            timer.innerHTML = msg;
-            if(totle===80){
-                clearInterval(countDown);
-                totle = totle+ maxtime;
-                console.log('intiming',totle)
-                // score[player-1].innerHTML= `Player${player} Scores:+ ${totle}`
-            } else if(maxtime === 0 ) {
-                alert("Time Over!");
-            } 
-        }
-    }, 1000); 
-}
-
-const playerOneStart = () => {
-    generateCards()
-    
-    console.log('last',totle)
-    console.log(score[0])
-    // score[0].innerHTML = 'Player1 Scores:'+ totle;
-}
-
-const playerTwoStart = () => {
-    generateCards()
-    score[1].innerHTML = 'Player2 Scores:'+ totle;
-}
->>>>>>> refs/remotes/origin/main

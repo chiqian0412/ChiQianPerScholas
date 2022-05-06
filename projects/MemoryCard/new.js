@@ -2,6 +2,9 @@ const gameBoard = document.querySelector('.gameBoard');
 const score = document.querySelectorAll('.scores');//array
 // var playerOneScore = 0;
 // var playerTwoScore = 0;
+var clickSound = new Audio('./sounds/clickSound.mp3');
+var wrongSound = new Audio('./sounds/wrong.m4a');
+var rightSound = new Audio('./sounds/good job.m4a')
 var totle = 0;
 var playerScores = [];
 var curCards = [];
@@ -12,6 +15,7 @@ gameBoard.innerHTML =
 <p>Click two cards to match the same pictures.</p>
 <p>Match one pair to get 10 points;</p>
 <p>Every remaining second get 1 extra point.</p>
+<p>This is a timer game, please pay attention.</p>
 </div>`
 
 // Classes the cards and back card.
@@ -50,17 +54,17 @@ const shuffle = () =>{
 
 var timer= document.querySelector('.time');   
 var scoresall = document.querySelector('.scoresall') ;
-var maxtime = 60; 
+var maxtime = 200; 
 var timestart;
 const startGame = () =>{
     gameBoard.innerHTML = "";
-    timer.innerHTML = "Limite time:60s";
+    timer.innerHTML = "Limit time:60s";
     scoresall.innerHTML = 'Scores:0';
 }
 const countDown = () =>{
     maxtime -= 1;
     if (maxtime >= 0) {
-        msg = "Limite time:" + maxtime + "s";
+        msg = "Limit time:" + maxtime + "s";
         timer.innerHTML = msg;
     }
     else{
@@ -69,13 +73,14 @@ const countDown = () =>{
         playerScores.push(totle);
         scoresall.innerHTML = 'Scores:'+ totle;
         totle = 0;
-        maxtime = 30;
+        maxtime = 200;
         comparePlayers();
         
     }
 }
 
 const notMatch = () =>{
+    wrongSound.play();
     curCards.forEach((a)=>{
         a.src = backCard.src;
     })
@@ -94,6 +99,7 @@ const generateCards = () => {
         frontView.classList = 'front';
         // add the click event to every cards.
         frontView.addEventListener("click",(e) => {
+            clickSound.play();
             curCards.push(e.target);
             flipCard(card,index)});
         gameBoard.appendChild(cardItem);
@@ -110,6 +116,7 @@ const generateCards = () => {
             // if two click aren't the same card and two cards matched.
                 if(curCards[0] !== curCards[1] && curCards[0].src === curCards[1].src ){
                     // match than add scores.
+                    rightSound.play();
                     totle += 10;
                     scoresall.innerHTML = 'Scores:'+ totle;
                     curCards[0].style.pointerEvents = "none";
@@ -122,7 +129,7 @@ const generateCards = () => {
                         playerScores.push(totle);
                         scoresall.innerHTML = 'Scores:'+ totle;
                         totle = 0;
-                        maxtime = 60;
+                        maxtime = 200;
                         
                         // compare two players scores.
                         comparePlayers();
@@ -138,29 +145,49 @@ const generateCards = () => {
 const comparePlayers = () =>{
     if(playerScores.length===1){
         score[0].innerHTML = 'Player One:'+playerScores[0];
+        gameBoard.innerHTML = 
+            `<div class="rules-2">
+            <h1>Click Start to Switch Player</h1>`
     }else if(playerScores.length === 2){
         score[1].innerHTML =  'Player two:'+playerScores[1];
         if(playerScores[0]>playerScores[1]){
             score[0].innerHTML = `
             <p>Player One: ${playerScores[0]}</p>
-            <h3>I Win!!!</h3>
-            `
+            <h3>I Win!!!</h3>`
+            gameBoard.innerHTML = 
+            `<div class="rules-2">
+            <h3>Player One Win!</h3>
+            <h3>Click New Game to Start a New Turn</h3>`
             document.querySelector('#player1').src = './Image/player1.gif';
+
         }else if(playerScores[1]>playerScores[0]){
             score[1].innerHTML = `
             <p>Player One: ${playerScores[1]}</p>
-            <h3>I Win!!!</h3>
-            `
+            <h3>I Win!!!</h3>`
+            gameBoard.innerHTML = 
+            `<div class="rules-2">
+            <h3>Player Two Win!</h3>
+            <h3>Click New Game to Start a New Turn</h3>`
             document.querySelector('#player2').src = './Image/player2.gif';
         }else{
-            score[0].innerHTML = `
-            <p>Player One: ${playerScores[0]}</p>
-            <h3>No one wins!</h3>
-            `
-            score[1].innerHTML = `
-            <p>Player One: ${playerScores[1]}</p>
-            <h3>No one wins!</h3>
-            `
+            gameBoard.innerHTML = 
+            `<div class="rules-2">
+            <h3>No One Win!</h3>
+            <h3>Click New Game to Start a New Turn</h3>`
         }
+        
+        playerScores.splice(0,2);
+    }
+}
+
+const musicCheck = document.querySelector('.musicCheck');
+const music =document.querySelector('.music iframe');
+const musicOnOff = () =>{
+    if(musicCheck.innerHTML === "On"){
+        musicCheck.innerHTML = "Off";
+        music.src=""
+    }else{
+        musicCheck.innerHTML = "On";
+        music.src = "./sounds/backgroundMusic.mp3";
     }
 }

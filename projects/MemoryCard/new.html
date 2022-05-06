@@ -11,7 +11,13 @@
     <body>
         <h1 class="header">Memory Game</h1>
         <div class="timer">
-            <div class="time"> Limit time: 60s</div>
+            <div class="time"> Limit time: 20s</div>
+            <div class="musicControl">Music:
+                <button onclick="musicOnOff()" class="musicCheck">On</button>
+                <div class="music hidden">
+                    <iframe src="./sounds/backgroundMusic.mp3" allow="autoplay"></iframe>
+                </div>
+            </div>
             <div class="scoresall">Scores:0</div>
         </div>
         <div class="game">
@@ -29,10 +35,9 @@
         </div>
         <div class="control">
             <button onclick="generateCards()" class="start">Start</button>
-            <button  onClick="window.location.reload();" class="replay">Try Agian</button>
+            <button  onClick="window.location.reload();" class="replay">New Game</button>
         </div>
-        <!-- <div class="back"></div> -->
-        
+       
         <script src="new.js"></script>
     </body>
 </html>

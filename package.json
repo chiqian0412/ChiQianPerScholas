@@ -1,0 +1,24 @@
+{
+  "name": "chitester",
+  "version": "1.0.0",
+  "description": "Node crash course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiqian0412/ChiQianPerScholas.git"
+  },
+  "author": "\"Chi Qian\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chiqian0412/ChiQianPerScholas/issues"
+  },
+  "homepage": "https://github.com/chiqian0412/ChiQianPerScholas#readme",
+  "keywords": [
+    "Node",
+    "Crash",
+    "Course"
+  ]
+}

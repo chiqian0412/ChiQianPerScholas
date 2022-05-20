@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+// create learner schema
 const learnerSchema = new mongoose.Schema({
     firstName:{
         type:String,
@@ -21,4 +21,6 @@ const learnerSchema = new mongoose.Schema({
     }
 })
 
-const learner = mongoose.model("")
+const learner = mongoose.model("learner", learnerSchema);
+
+module.exports = learner;

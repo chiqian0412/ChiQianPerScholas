@@ -1,4 +1,4 @@
-const learner = require("../models/learnermodel");
+// const learner = require("../models/learnermodel");
 const Learner = require("../models/learnermodel");
 
 
